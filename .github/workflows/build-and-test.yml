@@ -2,9 +2,9 @@ name: Build and test
 
 on:
   pull_request:
-    branches: [ master, main ]
+    branches: [ test-building-release ]
   push:
-    branches: [ master, main ]
+    branches: [ test-building-release ]
 
 jobs:
   build-and-test:
