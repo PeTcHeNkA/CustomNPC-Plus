@@ -495,7 +495,7 @@ public class ScriptWorld implements IWorld {
         fakePlayer.setCurrentItemOrArmor(0, stack.getMCItemStack());
 
         final BlockEvent.PlaceEvent placeEvent = new BlockEvent.PlaceEvent(
-            new BlockSnapshot(this.world, (int) Math.floor(posX), (int) Math.floor(posY), (int) Math.floor(posZ), mcBlock, metadata),
+            new BlockSnapshot(this.world, posX, posY, posZ, mcBlock, metadata),
             Blocks.air, fakePlayer);
 
         MinecraftForge.EVENT_BUS.post(placeEvent);
